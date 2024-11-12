@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  main:
+    web-application-type: reactive
+
+
+jwt:
+  secret-key: "ILK9A1Fz/hbUr2dfqzao2vTdF8DPyj2eD7p/vcjoH8lMDL1uF2fk2qMetfKS77CDh7g80IllV9IirNfXVvjnYtE7bzaiNylY1+0nlVo5unOHjUdZY53dIICwbZE+GMrpz1nV+r+AIEdW9Tq5Z5vdVlJZNBqsWtSvWHIlb39VUBHnzEbaAzKhCyi88FGm7PWL/Fq0EMq6SmpLMYa8t3I1PQrf9jngMYqD3pDRPZ1mg2xu9M9jvn8mW1/GT6kmC621s0UhpYJn8HoFo3FbAic229tP0eFsRoDYfdUCOvgrtvgLqIUL8h8oFIWC3LVbPGxb7R0DepljWdEVkSeDW5cd7A=="
+  secret-refresh-key: "WPODmKELoPl2XdEKp9BIwyIo/f6wC6KvoiQsSHa2zDoz0TpH7F+BwP5ZPSUTDs9fgDk1KzHhT0/vTnOU6mUXXaVLH9FLLSIGpZRe4OVVtDkva7t9aLZAXBcWThgALUFRn5vZyl/xenXiOs0OUqAphJbNbWMs8G+V0A2nbcimUm/1PcKHYm/ztrVD/w4vKdunG2BLUu2EKnLxtprqV/1Dxvx1bfAHAtVk85y4K2mgdT+6uU0uPAVM14PzoL3s5GwEB0P91ZSfaNlT17gLACz6OTTZpXYGkhHxEpEl4qmm3aW1f42wchTaKd0YI4i6EpUftAfUJVPrWyC8JLYuJ+wYrg=="
+  expiration: 3600         # Access token expiration in seconds (1 hour)
+  refresh-expiration: 86400 # Refresh token expiration in seconds (24 hours)
+
+debug: on

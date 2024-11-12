@@ -1,0 +1,36 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+
+server:
+  port: 8093
+
+# POSTGRESQL DATABASE
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/learnmicro
+#    username: postgres
+#    password: 220702
+#    driverClassname: org.postgresql.Driver
+#    type: com.zaxxer.hikari.HikariDataSource
+#  jpa:
+#    hibernate:
+#      dialect: org.hibernate.dialect.postgreSQLDialect
+#      ddl-auto: create-drop
+
+
+#ORACLE DATABASE
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/FREEPDB1
+    username: baharudindayat
+    password: 220702
+    driver-class-name: oracle.jdbc.OracleDriver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.Oracle10gDialect
+      ddl-auto: create
